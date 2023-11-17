@@ -1,11 +1,18 @@
-import Container from "./component/Container";
+import { Route, Routes } from "react-router-dom";
 import NavBar from "./component/NavBar";
+import Introduction from "./pages/Introduction";
+import GetStart from "./pages/GetStart";
+import Animation from "./pages/Animation";
 
 function App() {
   return (
     <div className="flex">
       <NavBar />
-      <Container />
+      <Routes>
+        <Route path="/" element={<Introduction />}></Route>
+        <Route path="/getstart" element={<GetStart />}></Route>
+        <Route path="/animation/:title" element={<Animation />}></Route>
+      </Routes>
     </div>
   );
 }
