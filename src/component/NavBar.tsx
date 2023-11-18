@@ -1,7 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function NavBar() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    console.log(pathname);
+  }, [pathname]);
   const titleStyle =
     "m-2 p-2 font-bold hover:shadow rounded-lg hover:bg-slate-200 hover:cursor-pointer text-sm";
   const listStyle =
@@ -22,20 +26,31 @@ export default function NavBar() {
         </Link>
       </div> */}
         <hr className="my-3" />
-        <div className="mt-5 m-2 p-2 font-bold rounded-lg text-sm">
-          Animation
-        </div>
+        <div className="mt-5 m-2 p-2 font-bold text-sm">Animation</div>
         <div className="flex flex-col">
           {animationList.map((item: string, index: number) => (
-            <Link key={index} to={`animation/${item}`} className={listStyle}>
+            <Link
+              key={index}
+              to={`animation/${item}`}
+              className={`mx-3 my-1 px-3 py-2 hover:shadow rounded-lg hover:bg-zinc-300 hover:cursor-pointer text-sm hover:text-black`}
+            >
               {item}
+              {/* {pathname === `/animation/${item}` ? (
+                <span className="mx-2">•</span>
+              ) : (
+                <></>
+              )} */}
             </Link>
           ))}
         </div>
         <div className="m-2 p-2 font-bold rounded-lg text-sm">Loading</div>
         <div className="flex flex-col">
           {loadingList.map((item: string, index: number) => (
-            <Link key={index} to={`loading/${item}`} className={listStyle}>
+            <Link
+              key={index}
+              to={`loading/${item}`}
+              className={`mx-3 my-1 px-3 py-2 hover:shadow rounded-lg hover:bg-zinc-300 hover:cursor-pointer text-sm hover:text-black`}
+            >
               {item}
             </Link>
           ))}
