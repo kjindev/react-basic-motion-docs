@@ -1,12 +1,10 @@
-import { Bounce, Fade, Loop, Pulse, Scale } from "react-basic-motion";
-import CodeBox from "../component/common/CodeBox";
+import { Ball, Skeleton } from "react-basic-motion";
 import Table from "../component/common/Table";
 import { useLocation, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getContent } from "../component/api/content";
 import { ContentType } from "../type/content";
 import CodeBox2 from "../component/common/CodeBox2";
-import Skeleton from "react-basic-motion/dist/loading/Skeleton";
 
 export default function Loading() {
   const { title } = useParams();
@@ -29,10 +27,9 @@ export default function Loading() {
         <div className="mb-3 text-lg">| Example</div>
         <div className="w-[300px] h-[170px] text-center bg-white shadow rounded-xl flex justify-center items-center mx-1">
           {title === "Ball" && (
-            <Loop
+            <Ball
               size={20}
               color="#232323"
-              duration={1}
               timing="ease-in-out"
               count="infinite"
             />

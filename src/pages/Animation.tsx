@@ -1,4 +1,4 @@
-import { Bounce, Fade, Pulse, Scale } from "react-basic-motion";
+import { Bounce, Fade, Pulse } from "react-basic-motion";
 import CodeBox from "../component/common/CodeBox";
 import Table from "../component/common/Table";
 import { useLocation, useParams } from "react-router-dom";
