@@ -36,9 +36,9 @@ export default function Loading() {
           )}
           {title === "Skeleton" && (
             <Skeleton
-              radius="30%"
               width="100px"
               height="100px"
+              radius="30%"
               duration={1}
               timing="ease-in-out"
               count="infinite"
@@ -60,8 +60,8 @@ export default function Loading() {
                   width={content.code.width}
                   height={content.code.height}
                   radius={content.code.radius}
-                  timing="ease-in-out"
-                  count="infinite"
+                  timing={content.code.timing}
+                  count={content.code.count}
                 />
               ) : null}
             </div>

@@ -51,7 +51,7 @@ export default function NavBar() {
         </div>
       </div>
       <div className="text-center text-sm py-2 text-zinc-300">
-        version 2.0.2
+        version 2.0.3
       </div>
     </div>
   );

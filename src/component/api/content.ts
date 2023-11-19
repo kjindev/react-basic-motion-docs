@@ -6,6 +6,9 @@ export const getContent = () => {
       code: {
         name: "x",
         range: 10,
+        duration: 1.5,
+        timing: "ease-in-out",
+        count: "infinite",
       },
       text: [
         {
@@ -45,7 +48,9 @@ export const getContent = () => {
       description: "Animation Component",
       code: {
         name: "blink",
-        range: null,
+        duration: 1.5,
+        timing: "ease-in-out",
+        count: "infinite",
       },
       text: [
         {
@@ -78,7 +83,15 @@ export const getContent = () => {
       title: "Pulse",
       description: "Animation Component",
       code: {
-        name: "blink",
+        width: "100px",
+        height: "100px",
+        color: "#232323",
+        fillColor: "#232323",
+        radius: "50%",
+        range: 10,
+        duration: 1.5,
+        timing: "ease-in-out",
+        count: "infinite",
       },
       text: [
         {
@@ -143,6 +156,8 @@ export const getContent = () => {
       code: {
         size: 20,
         color: "#232323",
+        timing: "ease-in-out",
+        count: "infinite",
       },
       text: [
         {
@@ -179,6 +194,8 @@ export const getContent = () => {
         height: "100px",
         radius: "30%",
         duration: 1,
+        timing: "ease-in-out",
+        count: "infinite",
       },
       text: [
         {
