@@ -1,19 +1,27 @@
 import { Link, useLocation } from "react-router-dom";
 import MobileNavContent from "./MobileNavContent";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function NavBar() {
-  // const { pathname } = useLocation();
+  const { pathname } = useLocation();
   const animationList = ["Bounce", "Fade", "Pulse"];
   const loadingList = ["Ball", "Skeleton"];
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
+
+  useEffect(() => {
+    setIsShowMobileMenu(false);
+  }, [pathname]);
+
   return (
     <>
-      <div className="fixed bg-zinc-800 text-zinc-100 p-3 w-full h-[60px] tab:w-[270px] tab:h-[100vh] shadow-sm flex tab:flex-col justify-between items-center">
+      <div className="z-100 fixed bg-zinc-800 text-zinc-100 p-3 w-full h-[60px] tab:w-[270px] tab:h-[100vh] shadow-sm flex tab:flex-col justify-between items-center">
         <div className="tab:w-[100%]">
           <Link to="/">
-            <div className="text-xl text-center tab:px-3 tab:py-2 tab:mt-5 mx-2 tab:mx-0">
-              React Basic Motion
+            <div className="text-lg tab:text-xl text-center tab:px-3 tab:py-2 tab:mt-5 mx-2 tab:mx-0 flex tab:block tab:items-start items-center">
+              React Basic Motion{" "}
+              <span className="tab:hidden ml-3 px-2 py-1 bg-zinc-100 text-zinc-800 rounded-full text-sm">
+                v2.0.3
+              </span>
             </div>
           </Link>
           <hr className="hidden tab:flex tab:my-3" />
