@@ -21,7 +21,7 @@ export default function AnimationPage() {
   }, [pathname]);
 
   return (
-    <div className="pl-[330px] p-10 text-sm">
+    <div className="pt-[100px] p-8 tab:pl-[330px] tab:p-10 text-sm">
       <div className="text-3xl font-bold">{title}</div>
       {content && <div>{content.description}</div>}
       <div className="mt-9 mb-6">
