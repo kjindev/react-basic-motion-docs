@@ -33,7 +33,7 @@ export default function CodeBox2({
   count,
 }: Props) {
   return (
-    <pre className="leading-7 bg-[#393939] px-8 py-6 rounded-xl flex flex-col justify-center mx-1">
+    <pre className="leading-7 bg-[#393939] px-8 py-6 rounded-xl flex flex-col justify-center">
       <code className="">
         <code className="text-cyan-400 italic">{`import`}</code>
         <code className="text-yellow-400">{` {`}</code>

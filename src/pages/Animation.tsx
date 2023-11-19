@@ -66,8 +66,8 @@ export default function AnimationPage() {
       {content && (
         <div className="mt-9 mb-6">
           <div className="mb-3 text-lg">| Code</div>
-          <div className="flex my-1">
-            <div className="">
+          <div className="flex flex-col pc:flex-row my-1">
+            <div className="mr-0 pc:mr-6">
               {title === "Bounce" || title === "Fade" ? (
                 <CodeBox
                   title={title || ""}
@@ -94,7 +94,7 @@ export default function AnimationPage() {
                 />
               )}
             </div>
-            <div className="ml-6">
+            <div className="mt-5 pc:mt-0">
               <Table text={content.text} />
             </div>
           </div>
