@@ -105,6 +105,7 @@ export default function AnimationPage() {
                   duration={content.code.duration}
                   width={content.code.width}
                   height={content.code.height}
+                  range={content.code.range}
                   radius={content.code.radius}
                   timing={content.code.timing}
                   count={content.code.count}
