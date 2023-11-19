@@ -1,21 +1,17 @@
 import { Route, Routes } from "react-router-dom";
 import NavBar from "./component/NavBar";
 import Introduction from "./pages/Introduction";
-import GetStart from "./pages/GetStart";
-import Animation from "./pages/Animation";
-import Loading from "./pages/Loading";
+import Detail from "./pages/Detail";
 
 function App() {
   return (
-    <div className="flex">
+    <>
       <NavBar />
       <Routes>
         <Route path="/" element={<Introduction />}></Route>
-        <Route path="/getstart" element={<GetStart />}></Route>
-        <Route path="/animation/:title" element={<Animation />}></Route>
-        <Route path="/loading/:title" element={<Loading />}></Route>
+        <Route path="/:title" element={<Detail />}></Route>
       </Routes>
-    </div>
+    </>
   );
 }
 

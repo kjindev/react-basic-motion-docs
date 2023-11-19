@@ -1,4 +1,4 @@
-import { Bounce, Fade, Pulse } from "react-basic-motion";
+import { Ball, Bounce, Fade, Pulse, Skeleton } from "react-basic-motion";
 import CodeBox from "../component/common/CodeBox";
 import Table from "../component/common/Table";
 import { useLocation, useParams } from "react-router-dom";
@@ -61,6 +61,24 @@ export default function AnimationPage() {
               count="infinite"
             />
           )}
+          {title === "Ball" && (
+            <Ball
+              size={20}
+              color="#232323"
+              timing="ease-in-out"
+              count="infinite"
+            />
+          )}
+          {title === "Skeleton" && (
+            <Skeleton
+              width="100px"
+              height="100px"
+              radius="30%"
+              duration={1}
+              timing="ease-in-out"
+              count="infinite"
+            />
+          )}
         </div>
       </div>
       {content && (
@@ -78,21 +96,20 @@ export default function AnimationPage() {
                   count="infinite"
                 />
               ) : null}
-              {title === "Pulse" && (
+              {title === "Pulse" || title === "Ball" || title === "Skeleton" ? (
                 <CodeBox2
-                  width="100px"
-                  height="100px"
-                  color="#232323"
-                  fillColor="#232323"
-                  radius="50%"
                   title={title || ""}
-                  name={content.code.name}
-                  range={content.code.range}
-                  duration={1.5}
-                  timing="ease-in-out"
-                  count="infinite"
+                  size={content.code.size}
+                  color={content.code.color}
+                  fillColor={content.code.fillColor}
+                  duration={content.code.duration}
+                  width={content.code.width}
+                  height={content.code.height}
+                  radius={content.code.radius}
+                  timing={content.code.timing}
+                  count={content.code.count}
                 />
-              )}
+              ) : null}
             </div>
             <div className="mt-5 pc:mt-0">
               <Table text={content.text} />

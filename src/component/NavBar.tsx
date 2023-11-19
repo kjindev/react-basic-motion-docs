@@ -25,7 +25,7 @@ export default function NavBar() {
           {animationList.map((item: string, index: number) => (
             <Link
               key={index}
-              to={`animation/${item}`}
+              to={`${item}`}
               className={`mx-3 my-1 px-3 py-2 hover:shadow rounded-lg hover:bg-zinc-300 hover:cursor-pointer text-sm hover:text-black`}
             >
               {item}
@@ -42,7 +42,7 @@ export default function NavBar() {
           {loadingList.map((item: string, index: number) => (
             <Link
               key={index}
-              to={`loading/${item}`}
+              to={`${item}`}
               className={`mx-3 my-1 px-3 py-2 hover:shadow rounded-lg hover:bg-zinc-300 hover:cursor-pointer text-sm hover:text-black`}
             >
               {item}
